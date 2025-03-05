@@ -1,0 +1,753 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Goldman', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #04211F, #104642); /* Linear gradient background */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure the gradient covers the full viewport height */
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Panel 1 (Header) */
+.panel-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: relative;
+}
+
+.company-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.company-name h1 {
+    font-family: 'Lexend Zetta', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: white;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.company-name .pentest {
+    font-family: 'Lexend Zetta', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    margin-top: -5px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-btn {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 20px;
+}
+
+.nav-btn:hover {
+    background-color: #E7E2E2;
+    color: #104642;
+}
+
+/* Panel 2 (Main Content) */
+.panel-2 {
+    padding: 50px 5%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.headline-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.headline {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 30px;
+    text-align: left;
+    max-width: 600px;
+    color: white;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* Brighten and Shimmer Effect for Text Sides */
+.headline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start shimmer from the left */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.5), /* Bright white shimmer */
+        transparent
+    );
+    animation: shimmer 3s infinite; /* Apply shimmer animation */
+}
+
+.headline-image {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    margin-right: 100px;
+    border-radius: 30px;
+}
+
+.talk-btn {
+    display: inline-block;
+    font-family: 'Goldman', sans-serif;
+    font-weight: 700; /* Bolden the text */
+    font-size: 18px;
+    color: #104642;
+    background-color: #D9D9D9;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.talk-btn:hover {
+    background-color: #104642;
+    color: white;
+}
+
+.talk-btn::after {
+    content: "→";
+    margin-left: 10px;
+    color: #104642;
+}
+
+.talk-btn:hover::after {
+    color: white;
+}
+
+/* Panel 3 */
+.panel-3 {
+    background-color: #E7E2E2; /* Background color for panel-3 */
+    padding: 50px 5%; /* Add padding for spacing */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center text alignment */
+}
+
+.panel-3-content {
+    max-width: 800px; /* Limit the width of the content */
+}
+
+.first-text {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #104642; /* Color for the first text */
+    margin-bottom: 20px; /* Space between first and second text */
+}
+
+.second-text {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #5E6B6A; /* Color for the second text */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .panel-1 {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 5%;
+    }
+
+    .company-name {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .company-name h1 {
+        font-size: 30px;
+    }
+
+    .company-name .pentest {
+        font-size: 16px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .nav-btn {
+        padding: 8px 12px;
+    }
+
+    .panel-2 {
+        align-items: center;
+    }
+
+    .headline {
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .headline-image {
+        height: 300px;
+        width: 300px;
+        margin-right: 0;
+    }
+
+    .talk-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    .panel-3 {
+        padding: 30px 5%; /* Adjust padding for smaller screens */
+    }
+
+    .first-text {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .second-text {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .company-name {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .company-name h1 {
+        font-size: 24px;
+    }
+
+    .company-name .pentest {
+        font-size: 14px;
+        margin-top: -3px;
+    }
+
+    .panel-1 {
+        padding: 10px 5%;
+    }
+
+    .panel-2 {
+        align-items: center;
+    }
+
+    .headline {
+        font-size: 24px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .headline-image {
+        height: 200px;
+        width: 200px;
+        margin-right: 0;
+    }
+
+    .talk-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .panel-3 {
+        padding: 20px 5%; /* Adjust padding for mobile screens */
+    }
+
+    .first-text {
+        font-size: 20px; /* Adjust font size for mobile screens */
+    }
+
+    .second-text {
+        font-size: 16px; /* Adjust font size for mobile screens */
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%; /* Start from the left */
+    }
+    100% {
+        left: 100%; /* Move to the right */
+    }
+}
+
+/* Panel 4 */
+.panel-4 {
+    background-color: #E7E2E2; /* Background color for panel-4 */
+    padding: 50px 5%; /* Add padding for spacing */
+    text-align: center; /* Center text alignment */
+}
+
+.panel-4-content {
+    max-width: 1200px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the content */
+}
+
+.panel-4-first-text {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #12635c; /* Color for the first text */
+    margin-bottom: 20px; /* Space between first and second text */
+}
+
+.panel-4-second-text {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #5E6B6A; /* Updated color to match panel-3 text */
+    margin-bottom: 40px; /* Space between second text and boxes */
+}
+
+.service-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px; /* Updated gap between boxes to 100px */
+    justify-content: center; /* Center the boxes */
+}
+
+.service-box {
+    width: 300px; /* Width of each box */
+    height: 350px; /* Height of each box */
+    background: linear-gradient(to bottom, #104642, #15625C); /* Gradient background */
+    border-radius: 20px; /* Rounded corners */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .panel-4 {
+        padding: 30px 5%; /* Adjust padding for smaller screens */
+    }
+
+    .panel-4-first-text {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .panel-4-second-text {
+        font-size: 40px; /* Adjust font size for smaller screens */
+    }
+
+    .service-box {
+        width: 45%; /* Adjust width for smaller screens */
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .service-boxes {
+        gap: 50px; /* Reduce gap for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .panel-4 {
+        padding: 20px 5%; /* Adjust padding for mobile screens */
+    }
+
+    .panel-4-first-text {
+        font-size: 20px; /* Adjust font size for mobile screens */
+    }
+
+    .panel-4-second-text {
+        font-size: 30px; /* Adjust font size for mobile screens */
+    }
+
+    .service-box {
+        width: 100%; /* Full width for mobile screens */
+        height: 250px; /* Adjust height for mobile screens */
+    }
+
+    .service-boxes {
+        gap: 20px; /* Reduce gap for mobile screens */
+    }
+}
+
+/* Box Styling */
+.service-box {
+    width: 300px; /* Width of each box */
+    height: 350px; /* Height of each box */
+    background: linear-gradient(to bottom, #104642, #15625C); /* Gradient background */
+    border-radius: 20px; /* Rounded corners */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.box-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.box-title {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.box-text {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 60px; /* Increased margin to create space above the "Read More" button */
+    padding: 0 10px; /* Optional: Add padding to prevent text from touching the edges */
+}
+
+.read-more-box {
+    position: absolute;
+    bottom: 20px;
+    width: auto;
+    padding: 10px 20px;
+    background-color: #A3FFD7;
+    border-radius: 20px;
+}
+
+.read-more-btn {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #605E5E;
+    text-decoration: none;
+}
+
+/* Panel-5 (Testimonials) */
+.panel-5 {
+    background-color: #E7E2E2; /* Background color for panel-5 */
+    padding: 50px 5%; /* Add padding for spacing */
+    text-align: center; /* Center text alignment */
+}
+
+.panel-5-content {
+    max-width: 1200px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the content */
+}
+
+.panel-5-title {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #104642; /* Color for the title */
+    margin-bottom: 40px; /* Space below the title */
+}
+
+/* Carousel Styling */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px; /* Increased width for the carousel */
+    margin: 0 auto; /* Center the carousel */
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
+}
+
+.carousel-slide {
+    min-width: 100%; /* Each slide takes full width */
+    min-height: 400px; /* Increased height for the slides */
+    display: flex;
+    align-items: center;
+    gap: 60px; /* Increased space between profile and feedback */
+    padding: 40px; /* Increased padding */
+    box-sizing: border-box;
+}
+
+.client-profile {
+    flex: 1;
+    max-width: 300px; /* Increased profile image width */
+}
+
+.profile-image {
+    width: 100%;
+    border-radius: 15px; /* Slightly larger rounded corners */
+}
+
+.client-feedback {
+    flex: 2;
+    text-align: left; /* Align feedback text to the left */
+}
+
+.feedback-text {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+    font-size: 22px; /* Increased font size */
+    color: #5E6B6A; /* Feedback text color */
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 30px; /* Increased space below feedback text */
+}
+
+.client-name {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 700;
+    font-size: 24px; /* Increased font size */
+    color: #104642; /* Client name color */
+    margin-bottom: 10px; /* Increased space below client name */
+}
+
+.client-position {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+    font-size: 20px; /* Increased font size */
+    color: #5E6B6A; /* Client position color */
+}
+
+/* Carousel Navigation Buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: none;
+    color: #104642; /* Button color */
+    font-size: 32px; /* Increased button size */
+    padding: 15px; /* Increased padding */
+    cursor: pointer;
+    border-radius: 50%; /* Circular buttons */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel-button:hover {
+    background-color: #104642; /* Button hover background */
+    color: white; /* Button hover text color */
+}
+
+.carousel-button.prev {
+    left: 20px; /* Position previous button on the left */
+}
+
+.carousel-button.next {
+    right: 20px; /* Position next button on the right */
+}
+
+/* Panel-6 */
+.panel-6 {
+    padding: 50px 5%;
+    background: linear-gradient(to bottom, #04211F 0%, #104642 100%);
+    width: 100%;
+}
+
+.panel-6-content {
+    max-width: 1200px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    /* Removed padding-left: 5% to align with Panel-2 and Panel-7 */
+}
+
+/* MANTRA Text */
+.mantra-text {
+    font-family: 'Lexend Zetta', sans-serif;
+    font-weight: 500; /* Medium */
+    font-size: 60px;
+    color: #FFFFFF; /* White color */
+    margin: 0; /* Remove default margin */
+}
+
+/* Secondary Text */
+.mantra-subtext {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 20px;
+    color: #FFFFFF; /* White color */
+    margin: 0; /* Remove default margin */
+}
+
+/* Icon Container */
+.icon-container {
+    display: flex;
+    gap: 50px; /* Space between icons */
+    margin-top: 20px; /* Space above icons */
+}
+
+/* Icons */
+.icon {
+    width: 50px; /* Icon width */
+    height: 50px; /* Icon height */
+    object-fit: contain; /* Ensure icons fit properly */
+    filter: brightness(0) invert(1); /* Convert icons to white */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mantra-text {
+        font-size: 50px; /* Adjust font size for smaller screens */
+    }
+
+    .mantra-subtext {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+
+    .icon-container {
+        gap: 30px; /* Reduce gap between icons for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .mantra-text {
+        font-size: 40px; /* Adjust font size for mobile screens */
+    }
+
+    .mantra-subtext {
+        font-size: 16px; /* Adjust font size for mobile screens */
+    }
+
+    .icon-container {
+        gap: 20px; /* Reduce gap between icons for mobile screens */
+    }
+
+    .icon {
+        width: 40px; /* Adjust icon size for mobile screens */
+        height: 40px;
+    }
+}
+
+/* Panel-7 */
+.panel-7 {
+    padding: 20px 5%;
+    background: linear-gradient(to bottom, #04211F 0%, #104642 100%);
+    width: 100%;
+}
+
+.panel-7-content {
+    width: 100%; /* Span full width after padding */
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between; /* Pushes children to extremes with max gap */
+    align-items: center; /* Vertically centers all items */
+    width: 100%;
+}
+
+/* "@MANTRA Inc." Text */
+.mantra-inc-text {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin: 0; /* Ensure no extra spacing */
+}
+
+/* Links Container */
+.links-container {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+/* Footer Links */
+.footer-link {
+    font-family: 'Goldman', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.footer-link:hover {
+    opacity: 0.7;
+}
+
+/* Responsive Design for Panel-7 */
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        align-items: flex-start; /* Align to the left */
+        gap: 10px;
+    }
+    .links-container {
+        gap: 15px;
+    }
+    .footer-link {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-row {
+        gap: 5px;
+    }
+    .links-container {
+        flex-direction: column; /* Stack links vertically */
+        gap: 5px;
+    }
+    .footer-link {
+        font-size: 14px;
+    }
+}
